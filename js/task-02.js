@@ -6,3 +6,17 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const arrayOfIngredients = [];
+ 
+const recipeEl = ingredients.forEach(element => {
+  
+  const itemOneEl = document.createElement(`li`);
+  itemOneEl.textContent = element;
+  itemOneEl.classList.add(`item`);
+  const itemWithClassEl = arrayOfIngredients.push(itemOneEl);
+
+})
+
+ console.log(arrayOfIngredients);
+ document.querySelector(`ul#ingredients`).append(...arrayOfIngredients);
