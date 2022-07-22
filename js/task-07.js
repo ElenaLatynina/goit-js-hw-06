@@ -8,11 +8,11 @@ const rangeEl = document.querySelector(`#font-size-control`);
 const valueRangeEl = Number(rangeEl.value);
 const spanText = document.querySelector(`#text`);
 
-rangeEl.addEventListener(`input`, onChangeSize)
-
 function onChangeSize() {
-    console.log(rangeEl.value);
     spanText.style.fontSize = valueRangeEl + `px`;
 }
+
+rangeEl.addEventListener(`input`, onChangeSize);
+
 
 
