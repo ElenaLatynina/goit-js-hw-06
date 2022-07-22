@@ -29,9 +29,9 @@ function onFormSubmit(event) {
          const formData = new FormData(event.currentTarget);
     console.log(formData);
 
-    formData.forEach((email, password ) => {
-        console.log('onFormSubmit -> email', email);
-        console.log('onFormSubmit -> pasword', password);
+    formData.forEach(( value, name  ) => {
+        console.log('onFormSubmit -> name', name);
+        console.log('onFormSubmit -> value', value);
     });
     }
    
