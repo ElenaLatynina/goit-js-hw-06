@@ -20,7 +20,7 @@ const form = document.querySelector(`.login-form`);
 function onFormSubmit(event) {
     event.preventDefault();
 
-    if (event.currentTarget.elements.email.value === `` || event.currentTarget.elements.email.value === ``) {
+    if (event.currentTarget.elements.email.value === `` || event.currentTarget.elements.password.value === ``) {
         alert(`Please input your email and password`);
     }
     else {
@@ -36,3 +36,4 @@ function onFormSubmit(event) {
 }
 
 form.addEventListener(`submit`, onFormSubmit);
+form.reset();
