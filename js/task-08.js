@@ -24,16 +24,18 @@ function onFormSubmit(event) {
         alert(`Please input your email and password`);
     }
     else {
-         const formData = new FormData(event.currentTarget);
-    console.log(formData);
+        const formElements = event.currentTarget.elements;
+        const email = formElements.email.value;
+        const password = formElements.password.value;
+        const formData = {
+            email,
+            password
+        };
+        console.log(formData);
+        form.reset();
 
-    formData.forEach(( value, name  ) => {
-        console.log('FormData -> name', name);
-        console.log('FormData -> value', value);
-    });
+    };
     }
-   
-}
 
 form.addEventListener(`submit`, onFormSubmit);
-form.reset();
+
