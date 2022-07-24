@@ -38,12 +38,13 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1){
     const boxSize = 30;
     let newBoxSize = boxSize + i * 10;
-    const newBox = `<div style= width: ${newBoxSize}px; height: ${newBoxSize}px; background-color : ${getRandomRgbColor()} ></div>`;
+    const newBox = document.createElement(`div`);
+    newBox.style.cssText = `width: ${newBoxSize}px; height: ${newBoxSize}px; background-color : ${getRandomRgbColor()}`
     boxesItems.push(newBox);
     console.log(boxesItems);
     
   }
-  boxesList.append([...boxesItems]);
+  boxesList.append(...boxesItems);
 }
 
 function destroyBoxes(){
