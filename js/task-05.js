@@ -9,11 +9,9 @@ const nameOutput = document.querySelector(`#name-output`);
 
 nameInput.addEventListener(`input`, onInputChange )
 
-function onInputChange(event) {
+function onInputChange() {
+    nameOutput.textContent = event.currentTarget.value;
 
-    if (event.currentTarget.value !== ``) {
-        nameOutput.textContent = event.currentTarget.value;
-    };
 }
 
 

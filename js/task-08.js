@@ -28,8 +28,8 @@ function onFormSubmit(event) {
     console.log(formData);
 
     formData.forEach(( value, name  ) => {
-        console.log('onFormSubmit -> name', name);
-        console.log('onFormSubmit -> value', value);
+        console.log('FormData -> name', name);
+        console.log('FormData -> value', value);
     });
     }
    

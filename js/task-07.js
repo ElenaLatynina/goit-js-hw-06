@@ -9,8 +9,7 @@ const valueRangeEl = Number(rangeEl.value);
 const spanText = document.querySelector(`#text`);
 
 function onChangeSize() {
-    spanText.style.fontSize = valueRangeEl + `px`;
-    // spanText.style.fontSize = `${valueRangeEl}px`
+    spanText.style.fontSize = `${valueRangeEl}px`
 }
 
 rangeEl.addEventListener(`input`, onChangeSize);

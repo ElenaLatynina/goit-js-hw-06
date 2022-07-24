@@ -8,9 +8,8 @@ const ingredients = [
 ];
 
 const arrayOfIngredients = [];
- 
-const recipeEl = ingredients.forEach(element => {
-  
+
+const recipeEl = ingredients.map(element => {
   const itemOneEl = document.createElement(`li`);
   itemOneEl.textContent = element;
   itemOneEl.classList.add(`item`);
